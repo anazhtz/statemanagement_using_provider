@@ -4,13 +4,11 @@ import '../service/http_service.dart';
 class ProductController extends GetxController{
   RxBool isLoading = true.obs;  // loading is now observable
   var productList = [].obs;
-
   @override
   void onInit() {  // what should happen when the app is loaded
     loadProducts();
     super.onInit();
   }
-
   void loadProducts() async{
     try{
       isLoading(true);
